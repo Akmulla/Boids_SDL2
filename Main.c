@@ -34,6 +34,7 @@ int main()
 	while (1)
 	{
 		ProcessInput();
+		RenderFrame(&app);
 	}
 
 	return 0;
