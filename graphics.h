@@ -2,5 +2,5 @@
 #include "structs.h"
 
 int InitializeGraphics();
-
-int RenderFrame();
+int PrepareScene();
+int PresentScene();

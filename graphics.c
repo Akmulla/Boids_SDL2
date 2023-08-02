@@ -38,7 +38,13 @@ int InitializeGraphics()
 	return 0;
 }
 
-int RenderFrame()
+int PrepareScene()
 {
+	SDL_SetRenderDrawColor(app.renderer, 96, 128, 255, 255);
+	SDL_RenderClear(app.renderer);
+}
 
+int PresentScene()
+{
+	SDL_RenderPresent(app.renderer);
 }

@@ -34,7 +34,10 @@ int main()
 	while (1)
 	{
 		ProcessInput();
-		RenderFrame();
+		PrepareScene();
+		PresentScene();
+
+		SDL_Delay(16);
 	}
 
 	return 0;
