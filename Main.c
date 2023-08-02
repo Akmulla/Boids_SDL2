@@ -4,7 +4,7 @@
 #include "structs.h"
 #include "graphics.h"
 
-struct App app;
+
 
 void ProcessInput(void)
 {
@@ -34,7 +34,7 @@ int main()
 	while (1)
 	{
 		ProcessInput();
-		RenderFrame(&app);
+		RenderFrame();
 	}
 
 	return 0;

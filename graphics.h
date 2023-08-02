@@ -1,6 +1,6 @@
 #pragma once
 #include "structs.h"
 
-int InitializeGraphics(struct App* app);
+int InitializeGraphics();
 
-int RenderFrame(struct App* app);
+int RenderFrame();
