@@ -4,8 +4,6 @@
 #include "structs.h"
 #include "graphics.h"
 
-
-
 void ProcessInput(void)
 {
 	SDL_Event e;
