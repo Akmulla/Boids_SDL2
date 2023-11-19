@@ -2,6 +2,7 @@
 #include "graphics.h"
 #include "structs.h"
 #include "defs.h"
+#include "draw.h"
 
 int InitializeGraphics()
 {
@@ -42,6 +43,14 @@ int PrepareScene()
 {
 	SDL_SetRenderDrawColor(app.renderer, 96, 128, 255, 255);
 	SDL_RenderClear(app.renderer);
+}
+
+int DrawObjects()
+{
+	for (int i = 0; i < scene.boidCount; i++)
+	{
+
+	}
 }
 
 int PresentScene()

@@ -80,8 +80,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Prog\Libs\SDL2-devel-2.28.2-VC\SDL2-2.28.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Prog\Libs\SDL2-devel-2.28.2-VC\SDL2-2.28.2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Prog\Libs\SDL2-devel-2.28.2-VC\SDL2-2.28.2\include;D:\Prog\Libs\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Prog\Libs\SDL2_image-devel-2.6.3-VC\SDL2_image-2.6.3\lib\x64;D:\Prog\Libs\SDL2-devel-2.28.2-VC\SDL2-2.28.2\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -125,7 +125,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,11 +145,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="draw.c" />
     <ClCompile Include="graphics.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="defs.h" />
+    <ClInclude Include="draw.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="structs.h" />
   </ItemGroup>

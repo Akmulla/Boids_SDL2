@@ -13,7 +13,17 @@ struct Vector2
 	double y;
 };
 
+typedef struct Vector2 Vector2;
+
 struct Boid
 {
-	struct Vector2 pos;
+	Vector2 pos;
 };
+
+typedef struct Boid Boid;
+
+struct Scene
+{
+	int boidCount;
+	Boid* boids;
+} scene;

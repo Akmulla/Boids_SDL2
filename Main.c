@@ -27,12 +27,18 @@ int main()
 		return -1;
 	}
 
+	int boidCount = 10;
+
+	scene.boidCount = boidCount;
+	scene.boids = malloc(sizeof(Boid) * boidCount);
+
 	printf("Init\n");
 
 	while (1)
 	{
 		ProcessInput();
 		PrepareScene();
+		DrawObjects();
 		PresentScene();
 
 		SDL_Delay(16);

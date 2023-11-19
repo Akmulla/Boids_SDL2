@@ -4,3 +4,4 @@
 int InitializeGraphics();
 int PrepareScene();
 int PresentScene();
+int DrawObjects();
