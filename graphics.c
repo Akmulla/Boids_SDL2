@@ -39,6 +39,8 @@ int InitializeGraphics()
 
 	int result = IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
 
+	boidTexture= IMG_LoadTexture(app.renderer, "D://Projects/Boids_SDL2/Img/Arrow.png");
+
 	return 0;
 }
 
@@ -50,12 +52,11 @@ int PrepareScene()
 
 int DrawObjects()
 {
-	//SDL_Texture* boidTexture;
-	char* path = SDL_GetBasePath();
-	SDL_Texture* boidTexture = IMG_LoadTexture(app.renderer, "D://Projects/Boids_SDL2/x64/Debug/Arrow.png");
+
+	//SDL_Texture* boidTexture = IMG_LoadTexture(app.renderer, "D://Projects/Boids_SDL2/Img/Arrow.png");
 
 
-	//boidTexture = LoadTexture("Img/Arrow.png");
+	//LoadTexture("D://Projects/Boids_SDL2/Img/Arrow.png", &boidTexture);
 	Blit(boidTexture, 100, 100);
 	//if (boidTexture)
 	//{
