@@ -20,17 +20,20 @@ void ProcessInput(void)
 	}
 }
 
-int main()
+void ProcessBoids()
 {
 
+}
 
+int main()
+{
 	if (InitializeGraphics(&app) < 0)
 	{
 		printf("Could not initialize graphics\n");
 		return -1;
 	}
 	
-	int boidCount = 1;
+	int boidCount = 10;
 
 	Boid* boids = (Boid* )malloc(sizeof(Boid) * boidCount);
 
@@ -38,7 +41,7 @@ int main()
 	{
 		for (int i = 0; i < boidCount; i++)
 		{
-			boids[i].pos.x = 100;
+			boids[i].pos.x = 100 + 100 * (double)i;
 			boids[i].pos.y = 100;
 		}
 	}
@@ -52,6 +55,7 @@ int main()
 	{
 		ProcessInput();
 		PrepareScene();
+		ProcessBoids();
 		DrawObjects();
 		PresentScene();
 

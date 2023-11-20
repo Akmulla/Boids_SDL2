@@ -57,16 +57,16 @@ int DrawObjects()
 
 
 	//LoadTexture("D://Projects/Boids_SDL2/Img/Arrow.png", &boidTexture);
-	Blit(boidTexture, 100, 100);
+	//Blit(boidTexture, 100, 100);
 	//if (boidTexture)
 	//{
 	//	if (scene.boids)
 	//	{
-	//		for (int i = 0; i < scene.boidCount; i++)
-	//		{
-	//			Blit(boidTexture, 100, 100);
-	//			//Blit(boidTexture, scene.boids[i].pos.x, scene.boids[i].pos.y);
-	//		}
+			for (int i = 0; i < scene.boidCount; i++)
+			{
+				//Blit(boidTexture, 100, 100);
+				Blit(boidTexture, scene.boids[i].pos.x, scene.boids[i].pos.y);
+			}
 	//	}
 	//}
 }

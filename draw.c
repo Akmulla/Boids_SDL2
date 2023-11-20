@@ -14,8 +14,8 @@ void Blit(SDL_Texture* texture, int x, int y)
 {
 	SDL_Rect dest;
 
-	dest.x = x;
-	dest.y = y;
+	dest.x = x - 32;
+	dest.y = y - 32;
 
 	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
 

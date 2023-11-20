@@ -18,6 +18,7 @@ typedef struct Vector2 Vector2;
 struct Boid
 {
 	Vector2 pos;
+	Vector2 v;
 };
 
 typedef struct Boid Boid;
