@@ -7,3 +7,5 @@ void ProcessSeparation();
 void ProcessCohesion();
 
 void ProcessAlignment();
+
+void ApplyMovement();
