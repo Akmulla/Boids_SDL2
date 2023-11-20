@@ -18,7 +18,18 @@ void Blit(SDL_Texture* texture, int x, int y)
 
 	dest.x = x;
 	dest.y = y;
-	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
+	//SDL_Texture* boidTexture = LoadTexture("Img/Arrow.png");
+	//int result = SDL_QueryTexture(boidTexture, NULL, NULL, &dest.w, &dest.h);
+	int result = SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
 
 	SDL_RenderCopy(app.renderer, texture, NULL, &dest);
+	//if (result)
+	//{
+	//	SDL_RenderCopy(app.renderer, texture, NULL, &dest);
+	//}
+	//else
+	//{
+	//	printf("error quering texture");
+	//}
+	
 }

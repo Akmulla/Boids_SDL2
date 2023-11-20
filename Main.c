@@ -22,15 +22,15 @@ void ProcessInput(void)
 
 int main()
 {
-	IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
+
 
 	if (InitializeGraphics(&app) < 0)
 	{
 		printf("Could not initialize graphics\n");
 		return -1;
 	}
-
-	int boidCount = 10;
+	
+	int boidCount = 1;
 
 	Boid* boids = (Boid* )malloc(sizeof(Boid) * boidCount);
 

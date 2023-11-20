@@ -3,6 +3,7 @@
 #include "structs.h"
 #include "defs.h"
 #include "draw.h"
+#include <SDL_image.h>
 
 int InitializeGraphics()
 {
@@ -36,7 +37,7 @@ int InitializeGraphics()
 		return -1;
 	}
 
-
+	int result = IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
 
 	return 0;
 }
@@ -49,15 +50,24 @@ int PrepareScene()
 
 int DrawObjects()
 {
-	SDL_Texture* boidTexture;
-	boidTexture = LoadTexture("Img/Arrow.png");
-	if (scene.boids)
-	{
-		for (int i = 0; i < scene.boidCount; i++)
-		{
-			Blit(boidTexture, scene.boids[i].pos.x, scene.boids[i].pos.y);
-		}
-	}
+	//SDL_Texture* boidTexture;
+	char* path = SDL_GetBasePath();
+	SDL_Texture* boidTexture = IMG_LoadTexture(app.renderer, "D://Projects/Boids_SDL2/x64/Debug/Arrow.png");
+
+
+	//boidTexture = LoadTexture("Img/Arrow.png");
+	Blit(boidTexture, 100, 100);
+	//if (boidTexture)
+	//{
+	//	if (scene.boids)
+	//	{
+	//		for (int i = 0; i < scene.boidCount; i++)
+	//		{
+	//			Blit(boidTexture, 100, 100);
+	//			//Blit(boidTexture, scene.boids[i].pos.x, scene.boids[i].pos.y);
+	//		}
+	//	}
+	//}
 }
 
 int PresentScene()
