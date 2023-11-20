@@ -3,6 +3,7 @@
 #include "defs.h"
 #include "structs.h"
 #include "graphics.h"
+#include <SDL_image.h>
 
 void ProcessInput(void)
 {
@@ -12,15 +13,17 @@ void ProcessInput(void)
 	{
 		switch (e.type)
 		{
-			case SDL_QUIT:
-				exit(0);
-				break;
+		case SDL_QUIT:
+			exit(0);
+			break;
 		}
 	}
 }
 
 int main()
 {
+	IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
+
 	if (InitializeGraphics(&app) < 0)
 	{
 		printf("Could not initialize graphics\n");
@@ -29,8 +32,19 @@ int main()
 
 	int boidCount = 10;
 
+	Boid* boids = (Boid* )malloc(sizeof(Boid) * boidCount);
+
+	if (boids)
+	{
+		for (int i = 0; i < boidCount; i++)
+		{
+			boids[i].pos.x = 100;
+			boids[i].pos.y = 100;
+		}
+	}
+
 	scene.boidCount = boidCount;
-	scene.boids = malloc(sizeof(Boid) * boidCount);
+	scene.boids = boids;
 
 	printf("Init\n");
 

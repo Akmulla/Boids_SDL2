@@ -36,6 +36,8 @@ int InitializeGraphics()
 		return -1;
 	}
 
+
+
 	return 0;
 }
 
@@ -47,9 +49,14 @@ int PrepareScene()
 
 int DrawObjects()
 {
-	for (int i = 0; i < scene.boidCount; i++)
+	SDL_Texture* boidTexture;
+	boidTexture = LoadTexture("Img/Arrow.png");
+	if (scene.boids)
 	{
-
+		for (int i = 0; i < scene.boidCount; i++)
+		{
+			Blit(boidTexture, scene.boids[i].pos.x, scene.boids[i].pos.y);
+		}
 	}
 }
 
