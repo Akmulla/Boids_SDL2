@@ -16,6 +16,7 @@ struct Vector2
 
 typedef struct Vector2 Vector2;
 void AddVector(Vector2* add_target, Vector2* b);
+void MultiplyVector(Vector2* v, double c);
 float GetAngle(Vector2 v1, Vector2 v2);
 
 struct Boid
