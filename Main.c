@@ -5,6 +5,12 @@
 #include "graphics.h"
 #include <SDL_image.h>
 
+void AddVector(Vector2* add_target, Vector2* b)
+{
+	add_target->x = add_target->x + b->x;
+	add_target->y = add_target->y + b->y;
+}
+
 void ProcessInput(void)
 {
 	SDL_Event e;

@@ -14,12 +14,12 @@ struct Vector2
 };
 
 typedef struct Vector2 Vector2;
-
-void Add(Vector2* add_target, Vector2* b)
-{
-	add_target->x = add_target->x + b->x;
-	add_target->y = add_target->y + b->y;
-}
+void AddVector(Vector2* add_target, Vector2* b);
+//void AddVector(Vector2* add_target, Vector2* b)
+//{
+//	add_target->x = add_target->x + b->x;
+//	add_target->y = add_target->y + b->y;
+//}
 
 struct Boid
 {

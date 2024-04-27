@@ -19,6 +19,6 @@ void ApplyMovement()
 {
 	for (int i = 0; i < scene.boidCount; i++)
 	{
-		scene.boids[i].pos += scene.boids[i].v;
+		//scene.boids[i].pos += scene.boids[i].v;
 	}
 }
