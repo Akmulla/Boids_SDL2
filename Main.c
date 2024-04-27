@@ -24,7 +24,10 @@ void ProcessBoids(Boid* boids, int boidCount)
 {
 	for (int i = 0; i < boidCount; i++)
 	{
+		Vector2 up = (Vector2){ 0,1 };
 		Vector2 v = boids[i].v;
+		double angle = GetAngle(v, up);
+		boids[i].rotation = angle + 90;
 		MultiplyVector(&v, DELTATIME);
 		AddVector(&boids[i].pos, &v);
 	}
@@ -49,7 +52,7 @@ int main()
 			boids[i].pos.x = 100 + 100 * (double)i;
 			boids[i].pos.y = 300;
 			boids[i].rotation = i * 30.;
-			boids[i].v = (Vector2){ 3,0 };
+			boids[i].v = (Vector2) { 20,0 };
 		}
 	}
 
@@ -66,9 +69,8 @@ int main()
 		DrawObjects();
 		PresentScene();
 
-		SDL_Delay(16);
+		SDL_Delay(TICK_RATE);
 	}
 
 	return 0;
 }
-
