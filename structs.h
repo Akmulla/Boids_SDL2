@@ -2,6 +2,7 @@
 
 #include <SDL.h>
 
+
 struct App {
 	SDL_Renderer* renderer;
 	SDL_Window* window;
@@ -15,16 +16,13 @@ struct Vector2
 
 typedef struct Vector2 Vector2;
 void AddVector(Vector2* add_target, Vector2* b);
-//void AddVector(Vector2* add_target, Vector2* b)
-//{
-//	add_target->x = add_target->x + b->x;
-//	add_target->y = add_target->y + b->y;
-//}
+float GetAngle(Vector2 v1, Vector2 v2);
 
 struct Boid
 {
 	Vector2 pos;
 	Vector2 v;
+	float rotation;
 };
 
 typedef struct Boid Boid;

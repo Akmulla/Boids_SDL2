@@ -27,6 +27,9 @@
     <ClCompile Include="BoidBehavior.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="structs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="defs.h">

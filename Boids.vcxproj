@@ -149,6 +149,7 @@
     <ClCompile Include="draw.c" />
     <ClCompile Include="graphics.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="structs.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BoidBehavior.h" />
